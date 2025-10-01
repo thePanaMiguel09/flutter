@@ -30,6 +30,7 @@ class MessageFieldBox extends StatelessWidget {
     );
 
     return TextFormField(
+      keyboardType: TextInputType.text,
       onTapOutside: (event) {
         focusNode.unfocus();
       },

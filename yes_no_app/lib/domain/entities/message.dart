@@ -1,0 +1,14 @@
+//Todo lo que esté en dominio debe de ser código puro de Dart
+
+enum FromWho { mine, hers }
+
+class Message {
+  final String text;
+  final String? imageUrl;
+  final FromWho fromWho;
+
+  Message({required this.text, this.imageUrl, required this.fromWho});
+
+  
+
+}
