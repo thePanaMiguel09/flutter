@@ -8,7 +8,4 @@ class Message {
   final FromWho fromWho;
 
   Message({required this.text, this.imageUrl, required this.fromWho});
-
-  
-
 }
