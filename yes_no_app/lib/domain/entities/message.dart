@@ -1,6 +1,6 @@
 //Todo lo que esté en dominio debe de ser código puro de Dart
 
-enum FromWho { mine, hers }
+enum FromWho { me, her }
 
 class Message {
   final String text;
