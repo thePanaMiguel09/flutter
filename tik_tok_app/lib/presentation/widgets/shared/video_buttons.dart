@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:tik_tok_app/config/helpers/format_number.dart';
 import 'package:tik_tok_app/domain/entities/video_post.dart';
@@ -16,6 +17,20 @@ class VideButtons extends StatelessWidget {
           value: video.likes,
           iconData: Icons.favorite,
           iconColor: Colors.red,
+        ),
+        SizedBox(height: 5),
+        _CustomIconButton(
+          value: video.views,
+          iconData: Icons.remove_red_eye_outlined,
+        ),
+        SizedBox(height: 5),
+        SpinPerfect(
+          duration: const Duration(seconds: 5),
+          infinite: true,
+          child: _CustomIconButton(
+            value: 0,
+            iconData: Icons.play_circle_outline_sharp,
+          ),
         ),
       ],
     );
@@ -43,7 +58,7 @@ class _CustomIconButton extends StatelessWidget {
           color: color,
           iconSize: 30,
         ),
-        Text(FormatNumber.humanReadble(value.toDouble())),
+        if (value > 0) Text(FormatNumber.humanReadble(value.toDouble())),
       ],
     );
   }
