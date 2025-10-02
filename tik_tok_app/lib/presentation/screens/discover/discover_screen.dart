@@ -5,6 +5,6 @@ class DiscoverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Discor Screen')));
+    return Scaffold(body: Center(child: Text('Discover Screen')));
   }
 }
