@@ -12,6 +12,9 @@
 .swiftpm/
 migrate_working_dir/
 
+tik_tok_app/assets/videos/
+
+
 # IntelliJ related
 *.iml
 *.ipr
