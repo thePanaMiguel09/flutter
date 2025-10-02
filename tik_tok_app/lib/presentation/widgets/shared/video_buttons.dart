@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tik_tok_app/config/helpers/format_number.dart';
 import 'package:tik_tok_app/domain/entities/video_post.dart';
 
 class VideButtons extends StatelessWidget {
@@ -42,7 +43,7 @@ class _CustomIconButton extends StatelessWidget {
           color: color,
           iconSize: 30,
         ),
-        Text("$value"),
+        Text(FormatNumber.humanReadble(value.toDouble())),
       ],
     );
   }
