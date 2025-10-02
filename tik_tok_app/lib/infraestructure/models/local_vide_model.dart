@@ -21,10 +21,6 @@ class LocalVideoModel {
         views: json['views'] ?? 0,
       );
 
-  // Map<String, dynamic> toJson () => {
-
-  // }
-
   VideoPost toVideoPostEntity() => VideoPost(
     caption: videoName,
     videoUrl: videoUrl,
