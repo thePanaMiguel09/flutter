@@ -44,7 +44,7 @@ class _CustomeListTitle extends StatelessWidget {
       leading: Icon(menuItem.icon, color: colors.primary),
       trailing: Icon(Icons.arrow_forward_ios_outlined),
       onTap: () {
-        //TODO navigate to another page
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }
