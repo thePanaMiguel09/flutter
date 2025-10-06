@@ -70,7 +70,31 @@ class ButtonsView extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(Icons.install_desktop_outlined),
               ),
+              CustomButton(),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        child: InkWell(
+          onTap: () {},
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text('Hola Mundo', style: TextStyle(color: Colors.white)),
           ),
         ),
       ),
