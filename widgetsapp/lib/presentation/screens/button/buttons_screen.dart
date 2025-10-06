@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String name = 'button_screen';
@@ -9,7 +10,70 @@ class ButtonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Botones')),
-      body: Placeholder(),
+      body: ButtonsView(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.pop();
+        },
+        child: Icon(Icons.arrow_back_ios_sharp),
+      ),
+    );
+  }
+}
+
+class ButtonsView extends StatelessWidget {
+  const ButtonsView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme;
+
+    return SizedBox(
+      width: double.infinity,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        child: SizedBox(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            spacing: 5,
+            children: [
+              ElevatedButton(onPressed: () {}, child: const Text('Eleveted')),
+              const ElevatedButton(
+                onPressed: null,
+                child: Text('Eleveted Disabled'),
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.access_alarms_outlined),
+                onPressed: () {},
+                label: const Text('Eleveted Icon'),
+              ),
+              FilledButton(onPressed: () {}, child: const Text('Filled')),
+              FilledButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.zoom_out_map_outlined),
+                label: const Text('Filled'),
+              ),
+              OutlinedButton(onPressed: () {}, child: const Text('Outlined')),
+              OutlinedButton.icon(
+                onPressed: () {},
+                label: const Text('Outlined Icon'),
+                icon: const Icon(Icons.account_box_sharp),
+              ),
+              TextButton(onPressed: () {}, child: Text('Text Button')),
+              TextButton.icon(
+                onPressed: () {},
+                label: Text('Text Icon'),
+                icon: const Icon(Icons.text_fields_outlined),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.install_desktop_outlined),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
