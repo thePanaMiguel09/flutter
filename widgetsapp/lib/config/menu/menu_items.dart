@@ -52,4 +52,10 @@ const appMenuItems = <MenuItem>[
     link: '/check-boxes',
     icon: Icons.checklist_rtl,
   ),
+  MenuItem(
+    title: 'App Tutorial',
+    subTitle: 'Thist is an Onboarding screen',
+    link: '/tutorial',
+    icon: Icons.accessible_rounded,
+  ),
 ];
