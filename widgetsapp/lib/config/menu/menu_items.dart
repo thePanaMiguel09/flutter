@@ -46,4 +46,10 @@ const appMenuItems = <MenuItem>[
     link: '/animated-container',
     icon: Icons.animation_outlined,
   ),
+  MenuItem(
+    title: 'Check Boxes & Radios',
+    subTitle: 'Section with checkboxes',
+    link: '/check-boxes',
+    icon: Icons.checklist_rtl,
+  ),
 ];
